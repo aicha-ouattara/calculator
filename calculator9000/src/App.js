@@ -11,6 +11,7 @@ class App extends Component {
     this.state = { data: ''}
   }
 
+
   calculate = () => {
     try {
       const result = eval(this.state.data);
@@ -29,8 +30,11 @@ class App extends Component {
       case 'equalize':
         this.calculate();
         break;
-        case 'audela':
-        this.calculate();
+        case 'equalize':
+        if(this.calculate < 90000)
+        {
+          return <ItsOverNineThousand/>
+        }
         break;
       default:
         this.setState({ data: this.state.data + value});
@@ -40,7 +44,6 @@ class App extends Component {
     return(
         <div className="Calculator">
           <BeautifullScreen data={this.state.data}/>
-          <ItsOverNineThousand data={"data"}/>
           <AmazingNumberButton>
             <MagnificientEqualButton onClick={this.handleClick} label="C" value="clearly" />
             <MagnificientEqualButton onClick={this.handleClick} label="7" value="7" />
