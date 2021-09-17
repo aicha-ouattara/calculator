@@ -29,6 +29,9 @@ class App extends Component {
       case 'equalize':
         this.calculate();
         break;
+        case 'audela':
+        this.calculate();
+        break;
       default:
         this.setState({ data: this.state.data + value});
     }
@@ -37,7 +40,7 @@ class App extends Component {
     return(
         <div className="Calculator">
           <BeautifullScreen data={this.state.data}/>
-          <ItsOverNineThousand/>
+          <ItsOverNineThousand data={"data"}/>
           <AmazingNumberButton>
             <MagnificientEqualButton onClick={this.handleClick} label="C" value="clearly" />
             <MagnificientEqualButton onClick={this.handleClick} label="7" value="7" />
