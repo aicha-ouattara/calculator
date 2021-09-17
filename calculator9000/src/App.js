@@ -30,11 +30,8 @@ class App extends Component {
       case 'equalize':
         this.calculate();
         break;
-        case 'equalize':
-        if(this.calculate < 90000)
-        {
-          return <ItsOverNineThousand/>
-        }
+        case (value > 90000):
+          return <ItsOverNineThousand/>;
         break;
       default:
         this.setState({ data: this.state.data + value});
