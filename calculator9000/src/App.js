@@ -3,6 +3,7 @@ import MagnificientEqualButton from './components/MagnificientEqualButton';
 import './App.css';
 import BeautifullScreen from './components/BeautifullScreen';
 import AmazingNumberButton from './components/AmazingNumberButton';
+import ItsOverNineThousand from "./components/ItsOverNineThousand";
 
 class App extends Component {
   constructor() {
@@ -36,6 +37,7 @@ class App extends Component {
     return(
         <div className="Calculator">
           <BeautifullScreen data={this.state.data}/>
+          <ItsOverNineThousand/>
           <AmazingNumberButton>
             <MagnificientEqualButton onClick={this.handleClick} label="C" value="clearly" />
             <MagnificientEqualButton onClick={this.handleClick} label="7" value="7" />
